@@ -13,7 +13,7 @@ const SignInPage = () => {
 
   const onClickSignIn = async () => {
     try {
-      const res = await signInWithEmailAndPassword(auth, email, password);
+      await signInWithEmailAndPassword(auth, email, password);
 
       await router.push(Router.top.path)
 
