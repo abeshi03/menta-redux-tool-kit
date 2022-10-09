@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Link from "next/link";
 import { Router } from "../router/router";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {User} from "../features/userSlice";
 import {RootState} from "../store";
 import {signOut} from "@firebase/auth";
@@ -10,7 +10,6 @@ import {auth} from "../firebase";
 const Home: NextPage = () => {
 
   const user: User = useSelector((state: RootState) => state.user);
-  const dispatch = useDispatch()
 
   const logout = async () => {
     try {
