@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Link from "next/link";
 import { Router } from "../router/router";
 import {useDispatch, useSelector} from "react-redux";
-import {updateUser, User} from "../features/userSlice";
+import {User} from "../features/userSlice";
 import {RootState} from "../store";
 import {signOut} from "@firebase/auth";
 import {auth} from "../firebase";
@@ -15,11 +15,6 @@ const Home: NextPage = () => {
   const logout = async () => {
     try {
       await signOut(auth)
-
-      dispatch(updateUser({
-        uid: "",
-        email: ""
-      }))
 
       alert("ログアウトしました")
 
