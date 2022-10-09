@@ -21,7 +21,7 @@ export const AuthInfo = () => {
         }))
       }
     })
-  })
+  }, [dispatch])
 
   return null
 }
