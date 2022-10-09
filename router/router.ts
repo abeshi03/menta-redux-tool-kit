@@ -6,5 +6,9 @@ export const Router = {
   signUp: {
     path: "/sign_up",
     pageName: "会員登録"
+  },
+  signIn: {
+    path: "/sign_in",
+    pageName: "ログイン"
   }
 }

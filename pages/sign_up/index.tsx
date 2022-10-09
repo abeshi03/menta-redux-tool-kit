@@ -19,7 +19,6 @@ const SignUpPage = () => {
       })
       .catch((error) => {
         console.error(error.code, error.message);
-        alert("エラーです")
       })
   }
 
